@@ -1,0 +1,239 @@
+html, body {
+    background-color: #faf4e1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+* Navigation menu with two options: adding/ listing products
+*/
+
+body header {
+    background-color: #261700;
+
+    color: #faf4e1;
+
+    position: relative;
+    height: 10%;
+    width: 100vw;
+
+    box-sizing: border-box;
+    padding: 10px 10px;
+
+    left: 0;
+
+    display: flex;
+    justify-content: space-around;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header .title {
+    height: 100%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+.title p {
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu ul li {
+    margin: 0 10px;
+    padding: 5px 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    list-style: none;
+
+    font-size: 20px;
+
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu ul li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #990000;
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+}
+
+main .listProductsField {
+    height: 50%;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 16px;
+
+    padding: 10px;
+
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+
+    background-color: #990000;
+    color: #faf4e1;
+}
+
+.listProductsField .arrows {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 10px 0;
+    margin: 10px 10px 0 10px;
+}
+
+.arrows .arrow {
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    border: 2px solid #a00d19;
+}
+
+.arrows .arrow:hover {
+    cursor: pointer;
+}
+
+.listProductsField table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+
+    margin: 0 10px 10px 10px;
+}
+
+table tr th {
+    padding-right: 30px;
+}
+
+.listProductsField .editDeleteButtons {
+    margin: 0 10px 10px 10px;
+
+}
+
+.listProductsField .editDeleteButtons button {
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: .2s ease-in;
+}
+
+
+main .addProductsForm {
+    height: 50%;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+
+    font-size: 18px;
+
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+
+    background-color: #990000;
+    color: #faf4e1;
+}
+
+.addProductsForm form {
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px 0;
+}
+
+.addProductsForm form table tr td {
+    padding: 5px 10px;
+}
+
+.addProductsForm form table tr th {
+    text-align: start;
+}
+
+.addProductsForm #submitButton {
+    margin-top: 10px;
+}
+
+main .descriptionField {
+    height: 50%;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #990000;
+    color: #faf4e1; 
+    
+    border-radius: 30px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p{
+    margin: 0;
+    color: white;
+}

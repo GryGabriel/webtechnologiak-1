@@ -1,0 +1,362 @@
+html, body {
+    background-color: #a1c181;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/*
+* Footer element with student and subject data
+*/
+
+body footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    background-color: rgb(35, 61, 77);
+    color: #ededf4;
+    
+    border-top-right-radius: 30px;
+    border-top: 5px solid #619b8a;
+    border-right: 5px solid #619b8a;
+
+    padding: 10px 20px;
+    transition: .5s ease-in;
+
+    z-index: 5;
+}
+
+footer:hover {
+    padding: 25px 50px;
+    transition: .5s ease-out;
+    cursor: zoom-in;
+}
+
+/*
+*
+*/
+
+
+/*
+* Main element that contains the form and listing fields
+*/
+
+body main {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 75%;
+    width: 75%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body main div.products {
+    background-color: #619b8a;
+    padding: 20px 30px;
+    border: 5px solid rgb(35, 61, 77);
+    border-radius: 30px;
+    color: black;
+
+    display: none;
+
+    z-index: 2;
+}
+
+/*
+* Add products
+*/
+
+main div.addProductsForm {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    top: 75%;
+    left: 80%;
+
+    z-index: 2;
+}
+
+main .addProductsForm form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+main .addProductsForm form label {
+    grid-column: 1;
+    text-align: start;
+    font-size: 20px;
+    align-self: center;
+    font-weight: bold;
+}
+
+main .addProductsForm form input {
+    grid-column: 2;
+    font-size: 16px;
+
+    border-radius: 5px;
+    border: 1px solid black;
+    
+    padding: 5px;
+}
+
+main .addProductsForm form input[type="submit"] {
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(35, 61, 77);
+    color: white;
+
+    padding: 10px 0;
+    border: 3px solid transparent;
+    transition: .2s ease-out;
+}
+
+main .addProductsForm form input[type="submit"]:hover {
+    cursor: pointer;
+    border: 3px solid white;
+    font-weight: bold;
+    transition: .2s ease-in;
+}
+
+main .addProductsForm form input[type="submit"]:active {
+    border: 3px solid rgb(35, 61, 77);
+    background-color: white;
+    color: rgb(35, 61, 77);
+}
+
+/*
+* List products
+*/
+
+main div.listProductsField {
+    margin: 0;
+    padding: 20px 40px;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 30%;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2;
+
+    width: auto;
+} 
+
+/*
+* Listed table's children: .heading and .listedTableField
+*/
+div.listProductsField div {
+    margin: 5px 0;
+    padding: 0 20px;
+}
+
+/*
+* Listed table's .heading
+*/
+
+div.listProductsField .heading {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.listProductsField .heading h3 {
+    padding: 0;
+    margin: 0;
+}
+
+div.listProductsField .heading .arrow {
+    /*background-color: rgb(35, 61, 77);*/
+    color: white;
+
+    border-radius: 5px;
+    border: 2px solid transparent;
+
+    transition: .2s ease-out;
+}
+
+div.listProductsField .heading .arrow:hover {
+    cursor: pointer;
+
+    border: 2px solid white;
+    font-weight: bold;
+
+    transition: .2s ease-in;
+}
+    
+
+div.listProductsField .listedTableField {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    padding: 10px;
+}
+
+.listedTableField .listedTable{
+    width: 100%;
+    margin-bottom: 20px;
+
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}
+
+
+
+.listedTable tr th,
+.listedTable tr td{
+    font-size: 20px;
+    padding: 5px 15px;
+    margin: 0 5px;
+
+    transition: background-color .8s ease, color .8s ease;
+}
+
+.listedTable tr th{
+    text-align: start;
+}
+
+.listedTable tr td{
+    text-align: center;
+
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+.tdHighlight{
+    background: linear-gradient(to bottom, #a1c181, #619b8a);
+}
+
+.listedTable tr .fa {
+    color: white;
+    display: none;
+}
+
+.listedTable tr .fa:hover {
+    cursor: pointer;
+}
+
+.listedTableField .modify {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+/* Animation styles for modified td elements */
+.modified.highlighted {
+    background-color: yellow; /* Change to your preferred color */
+    color: red; /* Change to your preferred color */
+}
+
+div.listProductsField .listedTableField .editProduct, div.listProductsField .listedTableField .deleteProduct {
+    /*background-color: rgb(35, 61, 77);*/
+    color: white;
+
+    width: auto;
+    height: 20%;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+    font-size: 16px;
+    border: 2px solid transparent;
+
+    transition: .2s ease-out;
+}
+
+div.listProductsField .listedTableField button:hover {
+    cursor: pointer;
+
+    border: 2px solid white;
+    font-weight: bold;
+
+    transition: .2s ease-in;
+}
+
+
+
+/*
+* Header element with assignment data
+*/
+
+body header {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: rgb(35, 61, 77);
+    color: #ededf4;
+
+    border-bottom-left-radius: 30px;
+    border-bottom: 5px solid #619b8a;
+    border-left: 5px solid #619b8a;
+
+    padding: 10px 30px;
+    transition: .5s ease-in;
+
+    z-index: 5;
+}
+
+header:hover {
+    padding: 25px 75px;
+    transition: .5s ease-out;
+    cursor:zoom-in;
+}
+
+header ul {
+    list-style: none;
+}
+
+
+
+/*
+* Background animation
+*/
+
+/* body .animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 2px;
+    background-color: black;
+    animation: wavy 2s linear infinite;
+
+    z-index: 0;
+}
+
+@keyframes wavy {
+    0% {
+        width: 1px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    100% {
+        width: 500px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+} */
+
+
+
+/*
+*
+*/
