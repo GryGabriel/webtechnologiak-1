@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+    <title>Termék nyilvántartó rendszer</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="title">
+            <p>Kozmetikai nyilvántartó rendszer</p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+            <li class="descriptionMenuItem"><a href="index.html">Leírás</a></li>
+                <li class="listProductsMenuItem"><a href="list.html">Terméklistázás</a></li>
+                <li class="addProductsMenuItem"><a href="add.html">Termék hozzáadása</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="listProductsField">
+            <div class="arrows">
+                <div class="arrow leftArrow"><i class="fa fa-arrow-left"></i></div>
+                <div class="arrow rightArrow"><i class="fa fa-arrow-right"></i></div>
+            </div>
+            <table class="listedTable">
+                <tr class="productNameRow">
+                    <th>Termék neve</th>
+                    <td></td>
+                </tr>
+                <tr class="productManufacturerRow">
+                    <th>Gyártó</th>
+                    <td></td>
+                </tr>
+                <tr class="productTypeRow">
+                    <th>Típus</th>
+                    <td></td>
+                </tr>
+                <tr class="productExpiryRow">
+                    <th>Szavatosság</th>
+                    <td></td>
+                </tr>
+                <tr class="productQuantityRow">
+                    <th>Készletmennyiség</th>
+                    <td></td>
+                </tr>
+                <tr class="productPriceRow">
+                    <th>Ár</th>
+                    <td></td>
+                </tr>
+                <tr class="productSalePriceRow">
+                    <th>Kedvezményes ár</th>
+                    <td></td>
+                </tr>
+            </table>
+
+            <div class="editDeleteButtons">
+                <button class="editProduct">Módosítás</button>
+                <button class="deleteProduct">Törlés</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Garay Gábor, Webtechnológiák </p>
+    </footer>
+
+    <img id="cosmeticsList" src="/images/cosmetics.png" alt="cosmetics">
+    <img id="cosmeticsList1" src="/images/cosmetics1.png" alt="cosmetics1">
+
+</body>
+
+</html>

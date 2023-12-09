@@ -1,0 +1,311 @@
+html, body {
+    background-color: #faf4e1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+* Navigation menu with two options: adding/ listing products
+*/
+
+body header {
+    background-color: #261700;
+
+    color: #faf4e1;
+
+    position: relative;
+    height: 10%;
+    width: 100vw;
+
+    box-sizing: border-box;
+    padding: 10px 10px;
+
+    left: 0;
+
+    display: flex;
+    justify-content: space-around;
+
+    border-bottom: 5px solid #990000;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header .title {
+    height: 100%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+.title p {
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu ul li {
+    margin: 0 10px;
+    padding: 5px 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    list-style: none;
+
+    font-size: 20px;
+
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu ul li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #990000;
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #faf4e1;
+}
+
+
+main {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .listProductsField {
+    height: auto;
+    width: auto;
+    background-color: #990000;
+
+    border: 5px solid #261700;
+    border-radius: 20px;
+
+    padding: 40px;
+
+    display: none;
+}
+
+.listProductsField .arrows {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arrows .arrow {
+    padding: 5px 10px;
+    border-radius: 20%;
+
+    border-radius: 10px;
+    color: #faf4e1;
+    font-size: 13px;
+}
+
+.arrows .arrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.listedTable {
+    margin: 20px 0;
+    font-size: 20px;
+
+    color: #faf4e1;
+}
+
+.listedTable tr {
+    text-align: left;
+}
+
+.listedTable tr td, .listedTable tr th {
+    padding: 5px 40px;
+}
+
+.editDeleteButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.editDeleteButtons button {
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    padding: 5px 10px;
+    color: #faf4e1;
+
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.editDeleteButtons button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.editProduct, .deleteProduct {
+    border-color: #faf4e1;
+}
+
+
+main .addProductsForm {
+    height: auto;
+    width: auto;
+    background-color: #990000;
+
+    border: 5px solid #261700;
+    border-radius: 20px;
+    
+    padding: 40px;
+}
+
+.addProductsForm #form input:not(#submitButton) {
+    border-radius: 10px;
+    border: 2px solid rgb(35, 61, 77);
+
+    width: 80%;
+    padding: 5px 10px;
+
+    font-size: 16px;
+}
+
+.addProductsForm #form input:not(#submitButton):focus {
+    border-color: transparent;
+    outline: none;
+}
+
+
+.addProductsForm table {
+    margin: 10px 0;
+    font-size: 20px;
+
+    color: #faf4e1;
+}
+
+.addProductsForm table tr {
+    text-align: left;
+}
+
+.addProductsForm table td, .addProductsForm table th {
+    padding: 5px 40px;
+}
+
+.addProductsForm #submitButton {
+    margin: 10px 0 0 0;
+    
+    border: 1px solid #faf4e1;
+    border-radius: 10px;
+
+    padding: 5px 10px;
+    color: #faf4e1;
+    background-color: rgb(35, 61, 77);
+
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.addProductsForm #submitButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+main .descriptionField {
+    height: auto;
+    width: auto;
+
+    background-color: #990000;
+    
+    border: 5px solid #261700;
+    border-radius: 20px;
+
+    padding: 40px;
+}
+
+.descriptionField p {
+    color: #faf4e1;
+    font-size: 26px;
+    font-family:'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+
+footer {
+    position: absolute;
+
+    width: 100%;
+    bottom: 5px;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p{
+    margin: 0;
+    color: #261700;
+}
+
+
+img {
+    position: absolute;
+
+    height: 250px;
+
+    border-radius: 50%;
+    border: 5px solid #261700;
+}
+
+img#cosmeticsIndex {
+    top: 30%;
+    right: 5%;
+}
+
+img#cosmeticsList{
+    top: 20%;
+    left: 5%;
+}
+
+img#cosmeticsAdd {
+    bottom: 20%;
+    left: 5%;  
+}
+
+img#cosmeticsIndex1 {
+    bottom: 10%;
+    left: 5%;
+}
+
+img#cosmeticsList1{
+    top: 50%;
+    right: 5%;
+}
+
+img#cosmeticsAdd1 {
+    bottom: 20%;
+    right: 5%;  
+}
+

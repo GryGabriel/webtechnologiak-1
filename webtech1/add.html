@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/script/script.js"></script>
+    <title>Termék nyilvántartó rendszer</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="title">
+            <p>Kozmetikai nyilvántartó rendszer</p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="descriptionMenuItem"><a href="index.html">Leírás</a></li>
+                <li class="listProductsMenuItem"><a href="list.html">Terméklistázás</a></li>
+                <li class="addProductsMenuItem"><a href="add.html">Termék hozzáadása</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="addProductsForm">
+            <form id="form" action="process.php" method="POST" autocomplete="off">
+                <table>
+                    <tr>
+                        <th>
+                            <label for="productName">Termék neve</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="text" name="productName" id="productName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="productManufacturer">Gyártó</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="text" name="productManufacturer" id="productManufacturer">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="productType">Típus</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="text" name="productType" id="productType">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="productExpiryDate">Szavatosság</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="date" name="productExpiryDate" id="productExpiryDate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="productQuantity">Készletmennyiség</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="number" name="productQuantity" id="productQuantity">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="productPrice">Ár</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="number" name="productPrice" id="productPrice">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="productSalePrice">Kedvezményes ár</label>
+                        </th>
+                        <td>
+                            <input class="addInput" type="number" name="productSalePrice" id="productSalePrice">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" id="submitButton" value="Hozzáadás">
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Garay Gábor, Webtechnológiák </p>
+    </footer>
+
+    <img id="cosmeticsAdd" src="/images/cosmetics.png" alt="cosmetics">
+    <img id="cosmeticsAdd1" src="/images/cosmetics1.png" alt="cosmetics1">
+
+</body>
+
+</html>
