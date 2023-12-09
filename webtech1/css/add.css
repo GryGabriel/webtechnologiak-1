@@ -1,0 +1,8 @@
+.nav-menu ul li.addProductsMenuItem {
+    animation: rotate 0.5s;
+}
+
+@keyframes rotate {
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}

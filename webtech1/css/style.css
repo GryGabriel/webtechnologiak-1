@@ -76,11 +76,6 @@ header .nav-menu {
     border-bottom: 2px solid transparent;
 }
 
-.nav-menu ul li:hover {
-    cursor: pointer;
-    border-bottom: 2px solid #990000;
-}
-
 .nav-menu li:hover::after {
     width: 100%;
 }
@@ -246,6 +241,8 @@ main .descriptionField {
     padding: 40px;
 }
 
+
+
 .descriptionField p {
     color: #faf4e1;
     font-size: 26px;
@@ -273,13 +270,14 @@ footer p{
 img {
     position: absolute;
 
-    height: 250px;
+    height: 225px;
 
     border-radius: 50%;
     border: 5px solid #261700;
 }
 
 img#cosmeticsIndex {
+    height: 200px;
     top: 30%;
     right: 5%;
 }
@@ -295,6 +293,7 @@ img#cosmeticsAdd {
 }
 
 img#cosmeticsIndex1 {
+    height: 200px;
     bottom: 10%;
     left: 5%;
 }
